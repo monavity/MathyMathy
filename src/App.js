@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./index.css";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import ScanPage from "./components/ScanPage";
+import ForgotPassword from "./components/ForgotPassword";
 
-function App() {
+export default function App() {
+  const [page, setPage] = useState("login");
+  const [users, setUsers] = useState([]);
+
+  const addUser = (user) => setUsers([...users, user]);
+
+  const updatePassword = (email, newPass) => {
+    const updated = users.map((u) =>
+      u.email === email ? { ...u, password: newPass } : u
+    );
+    setUsers(updated);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      {page === "login" && <Login setPage={setPage} users={users} />}
+      {page === "register" && <Register setPage={setPage} addUser={addUser} />}
+      {page === "forgot" && (
+        <ForgotPassword setPage={setPage} updatePassword={updatePassword} />
+      )}
+      {page === "scan" && <ScanPage setPage={setPage} />}
     </div>
   );
 }
-
-export default App;

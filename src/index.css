@@ -11,3 +11,196 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Page layout */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  height: 100vh;
+  padding: 20px;
+}
+
+.auth-wrapper {
+  text-align: center;
+}
+
+/* Logo + Brand */
+.auth-logo {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 10px;
+}
+
+.brand-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ff9f1c;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.auth-card {
+  width: 340px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  text-align: left;
+  margin: auto;
+}
+
+.auth-header {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Inputs */ 
+.auth-input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background: #f5f5f5;
+}
+
+/* Button */
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #ff9f1c;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  background: #ff8a00;
+}
+
+/* Links */
+.link {
+  text-align: center;
+  margin-top: 12px;
+  color: #1e40ff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.forgot {
+  margin-top: 6px;
+}
+/* ---------- SCAN PAGE UI ---------- */
+.scan-wrapper {
+  width: 100%;
+  padding: 10px;
+}
+
+.scan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 2px solid #ddd;
+}
+
+.scan-title {
+  font-size: 26px;
+  color: #ff9f1c;
+  font-weight: 700;
+}
+
+.scan-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.scan-box {
+  width: 95%;
+  margin: 15px auto;
+  height: 300px;
+  background: #e3e3e3;
+  border-radius: 14px;
+  border: 2px solid #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera-icon {
+  width: 80px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.scan-text-main {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+}
+
+.scan-text-sub {
+  font-size: 14px;
+  color: #777;
+}
+
+.scan-btn-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scan-btn {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scan-primary {
+  background: #ff9f1c;
+  color: white;
+}
+
+.scan-upload {
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.scan-manual {
+  background: white;
+  border: 1px solid #ccc;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 2px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  bottom: 0;
+  background: white;
+}
+
+.nav-item {
+  font-size: 14px;
+  text-align: center;
+  color: #444;
+}
